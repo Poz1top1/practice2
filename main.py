@@ -10,9 +10,14 @@ def calculate(first_number, operation, second_number):
         if second_number == 0:
             raise ZeroDivisionError("На ноль делить нельзя.")
         return first_number / second_number
+    elif operation == "//":
+        if second_number == 0:
+            raise ZeroDivisionError("На ноль делить нельзя.")
+        return first_number // second_number
     else:
-        raise ValueError("Неизвестная операция. Используйте +, -, * или /.")
-
+        raise ValueError(
+            "Неизвестная операция. Используйте +, -, *, / или //."
+        )
 
 def read_number(prompt):
     """Запрашивает число, повторяя ввод при ошибке."""
